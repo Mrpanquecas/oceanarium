@@ -31,3 +31,32 @@
     transform: rotate(360deg);
   }
 }
+
+#slide{
+  width: 100px;
+  position: absolute;
+  animation:linear infinite alternate;
+  animation-name: run;
+  animation-duration: 5s;
+}     
+@keyframes run {
+  0% { left: 0;}
+  50%{ left : 80%;}
+  100%{ left: 0;}
+}
+
+
+#slide2{
+  width: 100px;
+  position: absolute;
+  animation:linear infinite alternate;
+  animation-name: run2;
+  animation-duration: 5s;
+}     
+@keyframes run2 {
+  0% { left: 0;}
+  25%{ left : 20%;}
+  50%{ left : 50%;}
+  75%{ left : 80%;}
+  100%{ left: 0;}
+}
