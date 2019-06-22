@@ -25,10 +25,10 @@ export default class ParallaxContainer extends React.Component {
         <ParallaxLayer offset={2} speed={0} style={{ background: 'linear-gradient(#0099ff, #0066cc)' }} />
 
 
-        <ParallaxLayer offset={0.75} speed={-0.1} style={{ pointerEvents: 'none' }}>
-          <img src={iceburger} style={{ position: 'absolute', marginLeft: '25%' }} />
+        <ParallaxLayer offset={0.83} speed={-0.1} style={{ pointerEvents: 'none' }}>
+          <img src={iceburger} style={{ position: 'absolute', width: 300, marginLeft: '15%' }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={2.15} speed={-0.6} style={{ pointerEvents: 'none' }}>
+        <ParallaxLayer offset={0.93} speed={-0.1} style={{ pointerEvents: 'none' }}>
           <img src={pingu} style={{ width: 60, marginLeft: '60%' }} />
         </ParallaxLayer>
 
