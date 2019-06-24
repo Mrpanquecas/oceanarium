@@ -5,7 +5,7 @@ import iceburger from '../assets/iceburger.png'
 import iceburgertop from '../assets/iceburgertop.png'
 
 import iceburgerbottom from '../assets/iceburgerbottom.png'
-import PullGuin from './PullGuin'
+import PullabbleImage from './PullabbleImage'
 
 import fish from '../assets/fish.png'
 import '../App.css'
@@ -31,19 +31,14 @@ export default class ParallaxContainer extends React.Component {
 
 
         <ParallaxLayer offset={0} speed={0} style={{  pointerEvents: 'none' }}>
-          <img src={iceburgertop} style={{ position: 'absolute', bottom:0, width: '80%', pointerEvents: 'none', userSelect: 'none', userDrag:'none' }} />
+          <img src={iceburgertop} style={{ position: 'absolute', bottom:0, width: '80%' }} />
         </ParallaxLayer>
         
 
         <ParallaxLayer offset={1} speed={0} style={{  pointerEvents: 'none' }}>
-          <img src={iceburgerbottom} style={{ position: 'absolute', top:0, width: '80%', pointerEvents: 'none', userSelect: 'none', userDrag:'none' }} />
+          <img src={iceburgerbottom} style={{ position: 'absolute', top:0, width: '80%' }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={0.92} speed={0} style={{ pointerEvents: 'none' }}>
-          <img src={pingu} style={{ width: 60, marginLeft: '50%', pointerEvents: 'none', userSelect: 'none', userDrag:'none' }} />
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={0}>
-          <PullGuin style={{ position: 'absolute', bottom:0, left:'50%', touchAction:'none' }} />
-        </ParallaxLayer>
+
 {/*         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
           <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
           <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
@@ -70,23 +65,18 @@ export default class ParallaxContainer extends React.Component {
           <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
         </ParallaxLayer> */}
 
-        <ParallaxLayer offset={2} speed={-0.6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
-            <div id="slide2">
+        <ParallaxLayer offset={3} speed={-0.6} >
+            
+            
 
-                <img src={fish} style={{width:100}} />
-            </div>
+                <PullabbleImage id="slide" image={fish}  />
+                <PullabbleImage id="slide" image={fish}  />
+                <PullabbleImage id="slide" image={fish}  />
+
         </ParallaxLayer>
-        <ParallaxLayer offset={2.2} speed={-0.2} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
-                      <div id="slide">
 
-                <img src={fish} style={{width:100}} />
-            </div>
-        </ParallaxLayer>
-        <ParallaxLayer offset={2.4} speed={-0.4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
-                      <div id="slide2">
-
-                <img src={fish} style={{width:100}} />
-            </div>
+        <ParallaxLayer offset={0} speed={0}>
+          <PullabbleImage id="pingu" image={pingu} />
         </ParallaxLayer>
 {/*         <ParallaxLayer
           offset={2}
