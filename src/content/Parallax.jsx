@@ -2,6 +2,10 @@ import React from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import pingu from '../assets/pingu.png'
 import iceburger from '../assets/iceburger.png'
+import iceburgertop from '../assets/iceburgertop.png'
+
+import iceburgerbottom from '../assets/iceburgerbottom.png'
+
 import fish from '../assets/fish.png'
 import '../App.css'
 
@@ -25,8 +29,11 @@ export default class ParallaxContainer extends React.Component {
         <ParallaxLayer offset={2} speed={0} style={{ background: 'linear-gradient(#0099ff, #0066cc)' }} />
 
 
-        <ParallaxLayer offset={0.8} speed={0} style={{ pointerEvents: 'none' }}>
-          <img src={iceburger} style={{ position: 'absolute', width: 300 }} />
+        <ParallaxLayer offset={0} speed={0} style={{  pointerEvents: 'none' }}>
+          <img src={iceburgertop} style={{ position: 'absolute', bottom:0, width: '80%' }} />
+        </ParallaxLayer>
+        <ParallaxLayer offset={1} speed={0} style={{  pointerEvents: 'none' }}>
+          <img src={iceburgerbottom} style={{ position: 'absolute', top:0, width: '80%' }} />
         </ParallaxLayer>
         <ParallaxLayer offset={0.91} speed={0} style={{ pointerEvents: 'none' }}>
           <img src={pingu} style={{ width: 60, marginLeft: 220 }} />
