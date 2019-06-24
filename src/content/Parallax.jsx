@@ -42,7 +42,7 @@ export default class ParallaxContainer extends React.Component {
           <img src={pingu} style={{ width: 60, marginLeft: '50%', pointerEvents: 'none', userSelect: 'none', userDrag:'none' }} />
         </ParallaxLayer>
         <ParallaxLayer offset={0} speed={0}>
-          <PullGuin style={{ position: 'absolute', bottom:0, left:'50%' }} />
+          <PullGuin style={{ position: 'absolute', bottom:0, left:'50%', touchAction:'none' }} />
         </ParallaxLayer>
 {/*         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
           <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
