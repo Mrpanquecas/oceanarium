@@ -1,0 +1,15 @@
+
+  
+ .pingu {
+    width: 100px;
+    height: 100px;
+    cursor: -webkit-grab;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+  }
+  
+  .pingu:active {
+    cursor: -webkit-grabbing;
+  }
+  

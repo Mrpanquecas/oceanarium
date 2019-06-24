@@ -5,6 +5,7 @@ import iceburger from '../assets/iceburger.png'
 import iceburgertop from '../assets/iceburgertop.png'
 
 import iceburgerbottom from '../assets/iceburgerbottom.png'
+import PullGuin from './PullGuin'
 
 import fish from '../assets/fish.png'
 import '../App.css'
@@ -30,15 +31,19 @@ export default class ParallaxContainer extends React.Component {
 
 
         <ParallaxLayer offset={0} speed={0} style={{  pointerEvents: 'none' }}>
-          <img src={iceburgertop} style={{ position: 'absolute', bottom:0, width: '80%' }} />
+          <img src={iceburgertop} style={{ position: 'absolute', bottom:0, width: '80%', pointerEvents: 'none', userSelect: 'none', userDrag:'none' }} />
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0} style={{  pointerEvents: 'none' }}>
-          <img src={iceburgerbottom} style={{ position: 'absolute', top:0, width: '80%' }} />
-        </ParallaxLayer>
-        <ParallaxLayer offset={0.91} speed={0} style={{ pointerEvents: 'none' }}>
-          <img src={pingu} style={{ width: 60, marginLeft: 220 }} />
-        </ParallaxLayer>
+        
 
+        <ParallaxLayer offset={1} speed={0} style={{  pointerEvents: 'none' }}>
+          <img src={iceburgerbottom} style={{ position: 'absolute', top:0, width: '80%', pointerEvents: 'none', userSelect: 'none', userDrag:'none' }} />
+        </ParallaxLayer>
+        <ParallaxLayer offset={0.92} speed={0} style={{ pointerEvents: 'none' }}>
+          <img src={pingu} style={{ width: 60, marginLeft: '50%', pointerEvents: 'none', userSelect: 'none', userDrag:'none' }} />
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0}>
+          <PullGuin style={{ position: 'absolute', bottom:0, left:'50%' }} />
+        </ParallaxLayer>
 {/*         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
           <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
           <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
